@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento Hormonal por Tipo de Terapia</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .slide-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+        
+        .introduction {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(75, 108, 183, 0.1);
+            margin: 0 20px 20px;
+            border-radius: 5px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .card-header {
+            padding: 12px 15px;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card-icon {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        
+        .card-body {
+            padding: 15px;
+            flex-grow: 1;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .condition {
+            margin-bottom: 15px;
+            border-left: 3px solid #ddd;
+            padding-left: 10px;
+        }
+        
+        .condition-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .condition-details {
+            color: #555;
+        }
+        
+        .highlight {
+            background-color: rgba(255, 255, 0, 0.2);
+            padding: 0 3px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        /* Color coding for different treatments */
+        .testosterone .card-header { background-color: #2980b9; }
+        .testosterone .condition { border-color: #2980b9; }
+        
+        .estrogen .card-header { background-color: #8e44ad; }
+        .estrogen .condition { border-color: #8e44ad; }
+        
+        .corticoids .card-header { background-color: #27ae60; }
+        .corticoids .condition { border-color: #27ae60; }
+        
+        .gnrh .card-header { background-color: #f39c12; }
+        .gnrh .condition { border-color: #f39c12; }
+        
+        .dht .card-header { background-color: #d35400; }
+        .dht .condition { border-color: #d35400; }
+        
+        .progesterone .card-header { background-color: #c0392b; }
+        .progesterone .condition { border-color: #c0392b; }
+        
+        .footer {
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            background-color: #f5f5f5;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1>Tratamento Hormonal</h1>
+        </div>
+        
+        <div class="introduction">
+            O tratamento hormonal varia de acordo com a etiologia e o impacto endócrino das condições relacionadas à diferenciação sexual. 
+            A abordagem deve ser individualizada, considerando idade, fenótipo, sintomas clínicos e objetivos terapêuticos.
+        </div>
+        
+        <div class="grid-container">
+            <!-- Card 1: Terapia com Testosterona -->
+            <div class="card testosterone">
+                <div class="card-header">
+                    <div class="card-icon">♂</div>
+                    Terapia com Testosterona
+                </div>
+                <div class="card-body">
+                    <div class="condition">
+                        <div class="condition-name">Hipogonadismo Masculino (46,XY)</div>
+                        <div class="condition-details">
+                            Desenvolvimento e manutenção das características sexuais secundárias, aumento da massa muscular e densidade óssea.
+                        </div>
+                    </div>
+                    
+                    <div class="condition">
+                        <div class="condition-name">Síndrome de Klinefelter (47,XXY)</div>
+                        <div class="condition-details">
+                            Desenvolvimento sexual secundário, melhora da densidade óssea, composição corporal e bem-estar psicológico.
+                        </div>
+                    </div>
+                    
+                    <div class="condition">
+                        <div class="condition-name">SIA Parcial (SIAP)</div>
+                        <div class="condition-details">
+                            Tentativa de reposição em doses elevadas conforme grau de virilização e resposta clínica.
+                        </div>
+                    </div>
+                    
+                    <div class="condition">
+                        <div class="condition-name">PMDS</div>
+                        <div class="condition-details">
+                            Reposição androgênica quando há hipogonadismo associado.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 2: Terapia com Estrogênios -->
+            <div class="card estrogen">
+                <div class="card-header">
+                    <div class="card-icon">♀</div>
+                    Terapia com Estrogênios
+                </div>
+                <div class="card-body">
+                    <div class="condition">
+                        <div class="condition-name">Hipogonadismo Feminino (46,XX)</div>
+                        <div class="condition-details">
+                            Indução ou manutenção do desenvolvimento mamário, saúde óssea e função cardiovascular.
+                        </div>
+                    </div>
+                    
+                    <div class="condition">
+                        <div class="condition-name">SIA Completa (SIAC)</div>
+                        <div class="condition-details">
+                            Reposição após gonadectomia (recomendada após a puberdade) para manutenção das características femininas.
+                        </div>
+                    </div>
+                    
+                    <div class="condition">
+                        <div class="condition-name">Síndrome de Turner (45,X)</div>
+                        <div class="condition-details">
+                            Terapia a partir da adolescência para desenvolvimento sexual e manutenção da massa óssea.
+                        </div>
+                    </div>
+                    
+                    <div class="condition">
+                        <div class="condition-name">Disgenesia Gonadal</div>
+                        <div class="condition-details">
+                            Desenvolvimento e manutenção de características sexuais secundárias femininas.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3: Terapia com Glicocorticoides/Mineralocorticoides -->
+            <div class="card corticoids">
+                <div class="card-header">
+                    <div class="card-icon">⚕</div>
+                    Glicocorticoides/Mineralocorticoides
+                </div>
+                <div class="card-body">
+                    <div class="condition">
+                        <div class="condition-name">Hiperplasia Adrenal Congênita (HAC)</div>
+                        <div class="condition-details">
+                            <strong class="highlight">Glicocorticoides</strong> (hidrocortisona, prednisolona ou dexametasona) para suprimir a produção excessiva de andrógenos.
+                        </div>
+                    </div>
+                    
+                    <div class="condition">
+                        <div class="condition-name">HAC - Formas Perdedoras de Sal</div>
+                        <div class="condition-details">
+                            <strong class="highlight">Mineralocorticoides</strong> (fludrocortisona) e suplementação de sódio para controle hidroeletrolítico.
+                        </div>
+                    </div>
+                    
+                    <div class="condition">
+                        <div class="condition-name">Considerações Terapêuticas</div>
+                        <div class="condition-details">
+                            Ajuste da dose conforme crescimento e desenvolvimento, com monitoramento de efeitos adversos (Síndrome de Cushing iatrogênica).
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 4: Terapia com Análogos de GnRH -->
+            <div class="card gnrh">
+                <div class="card-header">
+                    <div class="card-icon">↓</div>
+                    Análogos de GnRH
+                </div>
+                <div class="card-body">
+                    <div class="condition">
+                        <div class="condition-name">Puberdade Precoce Central</div>
+                        <div class="condition-details">
+                            Interrupção da ativação prematura do eixo hipotálamo-hipófise-gonadal com <strong class="highlight">leuprorrelina</strong> ou similares.
+                        </div>
+                    </div>
+                    
+                    <div class="condition">
+                        <div class="condition-name">Condições de Virilização Excessiva</div>
+                        <div class="condition-details">
+                            Controle da progressão da puberdade em situações específicas que requerem mais tempo para decisões terapêuticas.
+                        </div>
+                    </div>
+                    
+                    <div class="condition">
+                        <div class="condition-name">Aspectos Terapêuticos</div>
+                        <div class="condition-details">
+                            Formulações mensais ou trimestrais, com monitoramento laboratorial regular e avaliação da idade óssea.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 5: Terapia com DHT -->
+            <div class="card dht">
+                <div class="card-header">
+                    <div class="card-icon">⚡</div>
+                    DHT e Derivados
+                </div>
+                <div class="card-body">
+                    <div class="condition">
+                        <div class="condition-name">Deficiência de 5α-redutase</div>
+                        <div class="condition-details">
+                            <strong class="highlight">DHT tópica</strong> para promover masculinização genital em lactentes ou pacientes com identidade de gênero masculina.
+                        </div>
+                    </div>
+                    
+                    <div class="condition">
+                        <div class="condition-name">Micropênis</div>
+                        <div class="condition-details">
+                            Aplicação local para estímulo do crescimento peniano em situações específicas antes da puberdade.
+                        </div>
+                    </div>
+                    
+                    <div class="condition">
+                        <div class="condition-name">Considerações Terapêuticas</div>
+                        <div class="condition-details">
+                            Uso criterioso conforme resposta clínica, fenótipo e identidade de gênero expressa pelo paciente.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 6: Terapia com Progesterona -->
+            <div class="card progesterone">
+                <div class="card-header">
+                    <div class="card-icon">○</div>
+                    Progesterona
+                </div>
+                <div class="card-body">
+                    <div class="condition">
+                        <div class="condition-name">Hipogonadismo Feminino (46,XX)</div>
+                        <div class="condition-details">
+                            Proteção endometrial e regulação do ciclo menstrual em pacientes que recebem estrogênios.
+                        </div>
+                    </div>
+                    
+                    <div class="condition">
+                        <div class="condition-name">Síndrome de Turner</div>
+                        <div class="condition-details">
+                            <strong class="highlight">Progesterona cíclica</strong> quando há desenvolvimento endometrial para prevenir hiperplasia.
+                        </div>
+                    </div>
+                    
+                    <div class="condition">
+                        <div class="condition-name">SIA Completa com Útero</div>
+                        <div class="condition-details">
+                            Em casos raros onde há presença de útero, para complementar a terapia estrogênica.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            O tratamento hormonal deve ser acompanhado por equipe multidisciplinar, com monitoramento laboratorial e avaliação clínica regular para ajuste das doses e prevenção de complicações a longo prazo.
+        </div>
+    </div>
+</body>
+</html>
